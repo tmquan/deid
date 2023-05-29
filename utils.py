@@ -54,8 +54,8 @@ def deidentify_spacy(text):
     doc = nlp(text)
     for entity in doc.ents:
         # print(entity.label_)
-        if entity.label_ in ['PERSON', 'DATE', 'CARDINAL', 'ORG', 'FAC', 'EMAIL']:
-            text = text.replace(entity.text, '<REDACTED>')
+        # if entity.label_ in ['PERSON', 'DATE', 'CARDINAL', 'ORG', 'FAC', 'EMAIL']:
+        text = text.replace(entity.text, '<REDACTED>')
     return text
 
 
